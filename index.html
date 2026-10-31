@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 - Profile Card</title>
+
+    <style>
+        /* 6.1 Box Model */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --background: #f1f5f9;
+            --text: #1e293b;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+        }
+
+        /* 6.4 Sticky Top Bar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #172554;
+            color: white;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .navbar h2 {
+            font-size: 22px;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+
+        /* 6.2 Profile Card */
+        .profile-card {
+            width: 300px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 18px;
+            padding: 25px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Circle Avatar */
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .profile-card h2 {
+            margin-bottom: 8px;
+        }
+
+        .role {
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* 6.3 Scrollable Bio */
+        .bio {
+            height: 100px;
+            overflow: auto;
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            margin-top: 15px;
+            text-align: left;
+            line-height: 1.5;
+            border-radius: 8px;
+        }
+
+        /* Second Colour Version */
+        .purple-card {
+            border-color: var(--secondary);
+        }
+
+        .purple-card .avatar {
+            border-color: var(--secondary);
+        }
+
+        .purple-card .role {
+            color: var(--secondary);
+        }
+
+        /* 6.4 Fixed Floating Button */
+        .add-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 200;
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 50%;
+            background: #16a34a;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .add-button:hover {
+            background: #15803d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Navbar -->
+    <header class="navbar">
+        <h2>My Profile Cards</h2>
+    </header>
+
+    <main class="container">
+
+        <!-- First Profile Card -->
+        <section class="profile-card">
+
+            <img class="avatar"
+            src="https://i.pravatar.cc/150?img=12"
+            alt="Profile Photo">
+
+            <h2>Shiv Kumar</h2>
+            <p class="role">Web Developer</p>
+
+            <div class="bio">
+                Hello! My name is Shiv Kumar.
+                I am a B.Tech Computer Science
+                Engineering student.
+
+                I am learning HTML, CSS, JavaScript
+                and Java programming.
+
+                My goal is to become a professional
+                software engineer and develop
+                useful projects.
+
+                I love learning new technologies
+                and improving my coding skills.
+            </div>
+
+        </section>
+
+         </section>
+
+    </main>
+
+    <!-- Fixed Add Button -->
+    <button class="add-button" aria-label="Add profile">+</button>
+
+    <footer>
+        <p>© 2026 My Profile Card</p>
+    </footer>
+
+</body>
+</html>
